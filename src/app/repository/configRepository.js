@@ -1,8 +1,14 @@
-const ConfigSchema = require('../schema/configSchema')
+const configSchema = require('../schema/configSchema')
 
 class ConfigRepository{
     async getConfig(){
-        return ConfigSchema.find()
+        return configSchema.find()
+    }
+    async postConfig(payload){
+        return configSchema.create(payload)
+    }
+    async updateConfig(id, payload){
+        return configSchema.findByIdAndUpdate(id, payload)
     }
 }
 
