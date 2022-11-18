@@ -19,7 +19,7 @@ class ConfigController {
     }
     async updateConfig(req, res){
         try{
-            const result = await ConfigService.updateConfig(req.params.id, req.body)
+            const result = await ConfigService.updateConfig(req.body)
             return res.status(200).json(result)
         } catch (error) {
             return res.status(400).json(error)

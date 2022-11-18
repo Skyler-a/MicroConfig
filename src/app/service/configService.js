@@ -9,8 +9,8 @@ class ConfigService{
         const result = await ConfigRepository.postConfig(payload)
         return result
     }
-    async updateConfig(id, payload){
-        const result = await ConfigRepository.updateConfig(id, payload)
+    async updateConfig(payload){
+        const result = await ConfigRepository.updateConfig(payload)
         return result
     }
 }

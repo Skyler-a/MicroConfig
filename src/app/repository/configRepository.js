@@ -7,8 +7,8 @@ class ConfigRepository{
     async postConfig(payload){
         return configSchema.create(payload)
     }
-    async updateConfig(id, payload){
-        return configSchema.findByIdAndUpdate(id, payload)
+    async updateConfig(payload){
+        return configSchema.findOneAndUpdate(payload)
     }
 }
 
