@@ -1,9 +1,10 @@
 const ConfigController = require('../app/controller/configController')
+const authMiddleware = require('../app/middleware/authMiddleware')
 
 module.exports = (server, routes, prefix = '/v1/config') => {
   routes.get('/', ConfigController.getConfig);
   routes.post('/', ConfigController.postConfig);
-  routes.put('/', ConfigController.updateConfig)
+  routes.put('/', authMiddleware, ConfigController.updateConfig)
 
   server.use(prefix, routes);
 };
