@@ -21,9 +21,10 @@ const configSchema = new mongoose.Schema(
     build: {
       type: Number,
       required: true
-    }
+    },
   },
   {
+    strict: false,
     versionKey: false
   }
 );
