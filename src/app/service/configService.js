@@ -10,6 +10,7 @@ class ConfigService{
         return result
     }
     async updateConfig(payload){
+
         const result = await ConfigRepository.updateConfig(payload)
         return result
     }

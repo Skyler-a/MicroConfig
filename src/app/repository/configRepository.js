@@ -8,7 +8,7 @@ class ConfigRepository{
         return configSchema.create(payload)
     }
     async updateConfig(payload){
-        return configSchema.findOneAndUpdate(payload)
+        return configSchema.replaceOne(payload)
     }
 }
 

@@ -25,8 +25,7 @@ const configSchema = new mongoose.Schema(
   },
   {
     strict: false,
-    versionKey: false,
-    timestamps: true
+    versionKey: false
   }
 );
 

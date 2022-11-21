@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const blockListSchema = new mongoose.Schema(
   {
     block_list: [{
-        type: String
+        type: String,
     }],
 
     over_18_list: [{

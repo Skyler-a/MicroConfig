@@ -5,7 +5,7 @@ class BlockListRepository{
         return blockListSchema.find()
     }
     async updateBlockList(payload){
-        return blockListSchema.findOneAndUpdate({$push: payload})
+        return blockListSchema.findOneAndUpdate(payload)
     }
 }
 
