@@ -1,4 +1,5 @@
 const ConfigRepository = require('../repository/configRepository')
+const BadRequest = require('../error/badRequest')
 
 class ConfigService{
     async getConfig(){
@@ -10,6 +11,10 @@ class ConfigService{
         return result
     }
     async updateConfig(payload){
+        
+        if(!Object.keys(payload).length){
+            throw new BadRequest("Campo vazio")
+        }
 
         const result = await ConfigRepository.updateConfig(payload)
         return result
