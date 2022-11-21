@@ -6,7 +6,7 @@ const blockListMiddleware = require('../app/middleware/blockListMiddleware');
 
 module.exports = (server, routes, prefix = '/v1/block_list') => {
   routes.get('/', BlockListController.getBlockList);
-  routes.put('/', blockListMiddleware, BlockListController.updateBlockList);
+  routes.put('/', authMiddleware, blockListMiddleware, BlockListController.updateBlockList);
 
   server.use(prefix, routes);
 };
