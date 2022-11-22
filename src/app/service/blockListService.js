@@ -1,5 +1,4 @@
 const BlockListRepository = require('../repository/blockListRepository')
-const BadRequest = require('../error/badRequest')
 
 class BlockListService {
     async getBlockList(){
