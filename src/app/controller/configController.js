@@ -11,7 +11,7 @@ class ConfigController {
     }
     async updateConfig(req, res){
         try{
-            const result = await ConfigService.updateConfig(req.body)
+            await ConfigService.updateConfig(req.body)
             return res.status(200).json({mensagem: "Atualizado com sucesso"})
         } catch (error) {
             return res.status(400).json(error)
